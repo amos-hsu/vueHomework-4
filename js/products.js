@@ -41,6 +41,9 @@ const app = createApp({
         .then( res=> {
           this.products = res.data.products;
           this.pagination = res.data.pagination;
+        })
+        .catch(err => {
+          alert(err.data.message);
         });
     },
     openModal(status, product){
@@ -61,7 +64,6 @@ const app = createApp({
         delProductModel.show();
         this.tempProduct = { ...product};
       }
-
     },
     delProduct(){ 
       let url = `${site}api/${api_path}/admin/product/${this.tempProduct.id}`;
@@ -70,6 +72,9 @@ const app = createApp({
         .then( res=> {
          this.getProducts();
          delProductModel.hide();
+      })
+      .catch(err => {
+        alert(err.data.message);
       });
     }
   },
