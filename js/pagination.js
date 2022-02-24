@@ -1,4 +1,4 @@
-export default{
+export default {
     props:['pages'],
     template:`<nav aria-label="Page navigation example">
     <ul class="pagination">

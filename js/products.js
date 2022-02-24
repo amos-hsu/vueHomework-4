@@ -6,7 +6,6 @@ const api_path = 'minhsin';
 let productModal = {};
 let delProductModel = {};
 
-
 const app = createApp({
   components:{
     pagination
@@ -52,7 +51,6 @@ const app = createApp({
         productModal.show();
         this.isNew = true;
       }else if( status === 'edit' ){
-        this.tempProduct = { ...product};
         this.tempProduct = { ...product};
         if(!this.tempProduct.imagesUrl){
           this.tempProduct.imagesUrl=[];
